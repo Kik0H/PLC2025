@@ -5,4 +5,4 @@ Este TPC consiste em criar uma expressão regular que represente strings binári
 
 Depois de alguma pesquisa teórica e alguns [testes no regex](testes_regex.png), obtive a [expressão pretendida](expressao.txt).
 
-
+```^1*0*(0|1)(0|01)*$```
