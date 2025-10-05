@@ -10,7 +10,7 @@ def md_para_html(texto):
         if re.match(r"\d+\. (.*)", linha):
             if not ol:
                 resultado.append("<ol>")
-                ol = True           #Abre o <ol>
+                ol = True          #Lista aberta
             resultado.append(re.sub(r"^\d+\. (.*)", r"<li>\1</li>", linha))
             continue
 
@@ -18,7 +18,7 @@ def md_para_html(texto):
             resultado.append("</ol>")
             ol = False  
 
-        #CABEÇALHOS
+        #CABECALHOS
         if re.match(r"^### (.*)", linha):
             resultado.append(re.sub(r"^### (.*)", r"<h3>\1</h3>", linha))   #Grupo de captura (Tudo o que está depois do ###, fica entre <h3></h3>)
             continue
@@ -34,12 +34,13 @@ def md_para_html(texto):
     if ol:
         resultado.append("</ol>")   #Se tiver uma lista no fim do texto
     
+    
     html = ("\n".join(resultado))   #Transforma a lista em string
         
     #Como os restantes casos podem aparecer em qualquer posição numa linha, posso substituir fora do loop
     #Com os cabeçalhos e as listas MUDAM uma linha inteira (por não terem um "limite" na expressão regular para fechar), é mais fácil analizar linha a linha e tratar destes casos no loop
 
-    #Tenho que usar o operador ? para tornar o operador * lazy.
+    #Uso o operador ? para tornar o operador * lazy.
     #Se não, em casos onde tenha 2 BOLDS ou 1 BOLD e 1 itálico na mesma linha, vai ficar mal feito, porque o operador * lê mais do que precisa
 
     #BOLD 
@@ -58,6 +59,8 @@ def md_para_html(texto):
 
 
 md = """# Exemplo
+## Teste 2
+### Teste 3
 Este é um **exemplo** e este é um *teste*.
 1. Primeiro item
 2. Segundo item
