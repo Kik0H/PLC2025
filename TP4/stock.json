@@ -1,0 +1,34 @@
+{
+    "stock": [
+        {
+            "cod": "A23",
+            "nome": "\u00e1gua 0.5L",
+            "quant": 3,
+            "preco": 0.7
+        },
+        {
+            "cod": "B10",
+            "nome": "sumo laranja 1L",
+            "quant": 5,
+            "preco": 1.2
+        },
+        {
+            "cod": "C05",
+            "nome": "bolacha maria",
+            "quant": 10,
+            "preco": 0.85
+        },
+        {
+            "cod": "D12",
+            "nome": "chocolate",
+            "quant": 7,
+            "preco": 1.5
+        },
+        {
+            "cod": "E07",
+            "nome": "batata frita",
+            "quant": 12,
+            "preco": 0.95
+        }
+    ]
+}
