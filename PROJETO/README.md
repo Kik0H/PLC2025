@@ -4,6 +4,16 @@
 - Francisco Bonjardim Dias A108561
 - Pedro Rodrigues Campos A108482
 - Rodrigo Gonçalves Rocha A108649
+---
+[Lexer](lexer.py)
+
+[Parser](parser.py)
+
+[Semântica](semantica.py)
+
+[CódigoMáquina](codigo.py)
+
+---
 
 **Uso**: COM OS FICHEIROS PASCAL NA MESMA PASTA QUE A MAIN
 
